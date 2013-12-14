@@ -36,7 +36,8 @@ namespace UrQuestionnaire.Web.Api.App_Start
             var sessionFactory = Fluently.Configure()
                 .Database(
                     MsSqlConfiguration.MsSql2008.ConnectionString(
-                        "Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Smurf\\Documents\\GitHub\\UrQuestionnaire\\src\\UrQustionnaire.Data\\SqlServer\\UrQuestionnaireDB.mdf;Integrated Security=True"))
+                    c => c.FromConnectionStringWithKey("UrQuestionnaireDB")).ShowSql())
+                       // "Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Smurf\\Documents\\GitHub\\UrQuestionnaire\\src\\UrQustionnaire.Data\\SqlServer\\UrQuestionnaireDB.mdf;Integrated Security=True"))
                        // "Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"C:\\Users\\rainaldo crosbourne\\Documents\\GitHub\\UrQuestionnaire\\src\\UrQustionnaire.Data\\SqlServer\\UrQuestionnaireDB.mdf\";Integrated Security=True"))
                 .CurrentSessionContext("web")
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<OpenEndedQuestionMap>())
