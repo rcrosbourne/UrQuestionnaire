@@ -25,14 +25,19 @@ namespace UrQuestionnaire.Web.Api.Controllers
             _question = question;
         }
 
-        public List<IQuestion> Get()
+        public IEnumerable<IQuestion> Get()
         {
-            var openEndedList = _session
+            var questions = _session
                 .QueryOver<UrQustionnaire.Data.OpenEndedQuestion>()
                 .List()
                 .Select(_question.CreateQuestion)
-                .ToList();
-            return openEndedList;
+                .ToList()
+                .Concat(_session
+                    .QueryOver<UrQustionnaire.Data.CloseEndedQuestion>()
+                    .List()
+                    .Select(_question.CreateQuestion)
+                    .ToList());
+            return questions;
         }
     }
 }

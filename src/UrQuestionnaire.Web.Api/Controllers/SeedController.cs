@@ -34,6 +34,28 @@ namespace UrQuestionnaire.Web.Api.Controllers
                 {
                     Description = "This is the second seeded question",
                     Text = "How does it compare to Entity Framework"
+                },
+                new CloseEndedQuestion()
+                {
+                    Description = "This is my first seeded close ended question",
+                    Text = "Do you think this will work",
+                    Choices = new List<string>()
+                    {
+                        "Yes",
+                        "No"
+                    }
+                },
+                new CloseEndedQuestion()
+                {
+                    Description = "This is my second seeded close ended question",
+                    Text = "How do u feel about Web API",
+                    Choices = new List<string>()
+                    {
+                        "Love It",
+                        "Hate it",
+                        "Rails Copy",
+                        "Don't give a shit"
+                    }
                 }
             };
             foreach (var question in questions)
