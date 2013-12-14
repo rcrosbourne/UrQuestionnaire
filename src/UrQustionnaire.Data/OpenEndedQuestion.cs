@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UrQustionnaire.Data
 {
-    public class OpenEndedQuestion : IVersionedModelObject
+    public class OpenEndedQuestion : IVersionedModelObject, IQuestion
     {
         public virtual long  Id { get; set; }
         public virtual string  Text { get; set; }
