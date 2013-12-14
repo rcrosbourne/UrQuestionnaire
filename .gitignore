@@ -131,8 +131,8 @@ UpgradeLog*.htm
 # SQL Server files
 App_Data/*.mdf
 App_Data/*.ldf
-src/UrQuestionnaire.Web.Api/*.mdf
-src/UrQuestionnaire.Web.Api/*.ldf
+src/UrQuestionnaire.Web.Api/App_Data/*.mdf
+src/UrQuestionnaire.Web.Api/App_Data/*.ldf
 
 
 #LightSwitch generated files
