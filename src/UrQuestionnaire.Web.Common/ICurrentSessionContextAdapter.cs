@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NHibernate;
 
-namespace UrQuestionnaire.Web.Api.App_Start
+namespace UrQuestionnaire.Web.Common
 {
     public interface ICurrentSessionContextAdapter
     {

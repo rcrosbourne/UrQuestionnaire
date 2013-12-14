@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using NHibernate;
-using NHibernate.Linq;
 using UrQuestionnaire.Web.Api.Models;
 using UrQuestionnaire.Web.Api.TypeMappers;
-using UrQustionnaire.Data;
-using IQuestion = UrQuestionnaire.Web.Api.Models.IQuestion;
-using OpenEndedQuestion = UrQuestionnaire.Web.Api.Models.OpenEndedQuestion;
+using UrQuestionnaire.Web.Common;
 
 namespace UrQuestionnaire.Web.Api.Controllers
 {
+    [LoggingNHibernateSession]
     public class QuestionController : ApiController
     {
         private readonly ISession _session;

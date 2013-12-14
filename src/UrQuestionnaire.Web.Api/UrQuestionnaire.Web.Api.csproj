@@ -45,6 +45,9 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\lib\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NHibernate">
       <HintPath>..\..\lib\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
@@ -132,9 +135,7 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\CurrentSessionContextAdapter.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\ICurrentSessionContextAdapter.cs" />
     <Compile Include="App_Start\NinjectConfigurator.cs" />
     <Compile Include="App_Start\NinjectDependencyResolver.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
@@ -218,6 +219,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UrQuestionnaire.Web.Common\UrQuestionnaire.Web.Common.csproj">
+      <Project>{fd5fe803-8a61-44bb-8e2f-0fd489b69049}</Project>
+      <Name>UrQuestionnaire.Web.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UrQustionnaire.Data\UrQuestionnaire.Data.csproj">
       <Project>{028f64aa-375e-4c81-b80d-bf96f2195b08}</Project>
       <Name>UrQuestionnaire.Data</Name>

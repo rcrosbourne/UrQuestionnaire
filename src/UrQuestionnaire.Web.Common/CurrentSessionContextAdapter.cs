@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using NHibernate;
 using NHibernate.Context;
 
-namespace UrQuestionnaire.Web.Api.App_Start
+namespace UrQuestionnaire.Web.Common
 {
     public class CurrentSessionContextAdapter : ICurrentSessionContextAdapter
     {

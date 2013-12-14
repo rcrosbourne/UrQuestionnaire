@@ -7,9 +7,11 @@ using System.Web.Http;
 using NHibernate;
 using UrQuestionnaire.Web.Api.Models;
 using UrQuestionnaire.Web.Api.TypeMappers;
+using UrQuestionnaire.Web.Common;
 
 namespace UrQuestionnaire.Web.Api.Controllers
 {
+    [LoggingNHibernateSession]
     public class SeedController : ApiController
     {
         private readonly ISession _session;
