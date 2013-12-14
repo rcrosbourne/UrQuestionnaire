@@ -5,9 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using NHibernate;
+using NHibernate.Linq;
 using UrQuestionnaire.Web.Api.Models;
 using UrQuestionnaire.Web.Api.TypeMappers;
 using UrQustionnaire.Data;
+using IQuestion = UrQuestionnaire.Web.Api.Models.IQuestion;
+using OpenEndedQuestion = UrQuestionnaire.Web.Api.Models.OpenEndedQuestion;
 
 namespace UrQuestionnaire.Web.Api.Controllers
 {
@@ -22,13 +25,14 @@ namespace UrQuestionnaire.Web.Api.Controllers
             _question = question;
         }
 
-        public IEnumerable<Question> Get()
+        public List<IQuestion> Get()
         {
-            return _session
-                .QueryOver<OpenEndedQuestion>()
+            var openEndedList = _session
+                .QueryOver<UrQustionnaire.Data.OpenEndedQuestion>()
                 .List()
                 .Select(_question.CreateQuestion)
                 .ToList();
-        } 
+            return openEndedList;
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace UrQuestionnaire.Data.Tests
     {
         private readonly OpenEndedQuestion openQuestion = new OpenEndedQuestion()
         {
-            Descriiption = "This is a test", 
+            Description = "This is a test", 
             Text = "Are you male or female"
         };
         [TestMethod]

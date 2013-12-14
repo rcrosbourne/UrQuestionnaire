@@ -9,6 +9,10 @@ namespace UrQuestionnaire.Web.Api.TypeMappers
 {
     public interface IQuestionMapper
     {
-        Question CreateQuestion(OpenEndedQuestion openEndedQuestion);
+        //Question CreateQuestion(OpenEndedQuestion openEndedQuestion);
+        //OpenEndedQuestion CreateQuestion(Question question);
+
+        UrQuestionnaire.Web.Api.Models.IQuestion CreateQuestion(UrQustionnaire.Data.IQuestionModelObject question);
+        UrQustionnaire.Data.IQuestionModelObject CreateQuestion(UrQuestionnaire.Web.Api.Models.IQuestion question);
     }
 }

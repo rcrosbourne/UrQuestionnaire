@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace UrQustionnaire.Data
 {
-    public class OpenEndedQuestionMap : VersionedClassMap<OpenEndedQuestion>
+    public class OpenEndedQuestionMap : QuestionClassMap<OpenEndedQuestion>
     {
         public OpenEndedQuestionMap()
         {
-            Id(x => x.Id);
-            Map(x => x.Text).Not.Nullable();
-            Map(x => x.Descriiption).Nullable();
+           //Table("OpenEndedQuestion");
         }
     }
 }

@@ -63,7 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IQuestion.cs" />
+    <Compile Include="IQuestionModelObject.cs" />
+    <Compile Include="QuestionClassMap.cs" />
     <Compile Include="UrQuestionnaireDbConfig.cs" />
     <Compile Include="VersionedClassMap.cs" />
     <Compile Include="IVersionedModelObject.cs" />
